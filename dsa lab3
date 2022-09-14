@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void arrcreate(int r){
+    
+    int i;
+    int arr[r];
+    for(i=0; i<r; i++){
+        printf("Enter the element of the array ");
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Array Created Successfully");
+    
+}
+
+void search(int n){
+    int i=0;
+    int *ar;
+    ar = arr;
+    while(*arr!="\0"){
+        if(*arr == n){
+            printf("%p", ar);
+            break;
+        }
+        arr++;
+    }
+}
+
+int main(){
+    int r,n;
+    printf("Enter the size of the array ");
+    scanf("%d",&r);
+    arrcreate(r);
+    printf("Enter the number you want to search");
+    scanf("%d",&n);
+    search(n);
+    return 0;
+}
